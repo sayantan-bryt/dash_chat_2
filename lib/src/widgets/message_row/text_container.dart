@@ -76,13 +76,13 @@ class TextContainer extends StatelessWidget {
                       : messageOptions.borderRadius,
             ),
       padding: messageOptions.messagePadding,
-      child: messageTextBuilder != null
-          ? messageTextBuilder!(message, previousMessage, nextMessage)
-          : DefaultMessageText(
-              message: message,
-              isOwnMessage: isOwnMessage,
-              messageOptions: messageOptions,
-            ),
+      child: messageTextBuilder != null ?
+      messageTextBuilder!(message, previousMessage, nextMessage) :
+      DefaultMessageText(
+        message: message,
+        isOwnMessage: isOwnMessage,
+        messageOptions: messageOptions,
+      ),
     );
   }
 }
